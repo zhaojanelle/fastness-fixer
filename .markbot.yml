@@ -1,0 +1,95 @@
+repo: 'fastness-fixer'
+canvasCourse: 'web-dev-3'
+
+naming: true
+restrictFileTypes: true
+liveWebsite: true
+
+git:
+  numCommits: 2
+  allCommitted: true
+  allSynced: true
+
+allFiles:
+  files:
+    smushed: true
+
+html:
+  - path: 'index.html'
+    valid: true
+    bestPractices: true
+    outline: true
+    performance:
+      speed: 'WIFI'
+      budget:
+        maxFonts: 3
+    has:
+      - ['link[href*="Cormorant+Garamond"]', 'The Google Font, `Cormorant Garamon` is missing']
+      - ['link[href*="Delius+Unicase"]', 'The Google Font, `Delius Unicase` is missing']
+    hasNot:
+      - ['link[href*="Lobster"]', 'The Google Font, `Lobster` isn’t necessary for the website']
+      - ['script[src*="tracker.js"]', 'Delete the tracker `<script>` tag — tracking scripts slow websites down']
+      - ['iframe[src*="ad"]', 'Delete the ad’s `<iframe>` tag — advertisements slow websites down']
+
+css:
+  - path: 'css/main.css'
+    valid: true
+    bestPractices: true
+    hasNot:
+      - ['.ad-wrap']
+      - ['.ad-wrap::before']
+      - ['.ad']
+      - ['.banner-content', ['font-family']]
+
+  - path: 'css/grid.css'
+    valid: true
+    bestPractices: true
+    searchNot:
+      - ['.unit-m-1-4', 'Having `4` column widths in `medium` and smaller sizes isn’t useful because the website doesn’t use them']
+      - ['.unit-l-hidden', 'The `large` size isn’t necessary because the website doesn’t use it']
+
+  - path: 'css/modules.css'
+    valid: true
+    bestPractices: true
+    hasNot:
+      - ['.icon', false, 'The “Icons” module isn’t necessary because the website doesn’t use it']
+      - ['.media', false, 'The “Media objects” module isn’t necessary because the website doesn’t use it']
+      - ['.hidden', false, 'The “Hidden” module isn’t necessary because the website doesn’t use it']
+      - ['fieldset', false, 'The “Forms” module isn’t necessary because the website doesn’t use it']
+      - ['.btn', false, 'The “Basic buttons” module isn’t necessary because the website doesn’t use it']
+      - ['.skip-links', false, 'The “Accessibility” module isn’t necessary because the website doesn’t use it']
+    searchNot:
+      - ['@media print', 'The “Print styles” module isn’t necessary because the website doesn’t use it']
+
+screenshots:
+  - path: 'index.html'
+    sizes: [320, 1440]
+
+files:
+  - path: 'css/modules.css'
+    maxSize: 6
+
+  - path: 'css/grid.css'
+    maxSize: 5
+
+  - path: 'images/banner.jpg'
+    maxSize: 205
+    maxWidth: 2500
+    maxHeight: 1700
+
+  - path: 'images/snail.jpg'
+    maxSize: 100
+    maxWidth: 2500
+    maxHeight: 1700
+
+  - path: 'images/snail-2.jpg'
+    maxSize: 70
+    maxWidth: 1400
+    minWidth: 1400
+    maxHeight: 1000
+
+  - path: 'images/snail-3.jpg'
+    maxSize: 70
+    maxWidth: 1400
+    minWidth: 1400
+    maxHeight: 1000
