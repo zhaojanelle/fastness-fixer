@@ -2,6 +2,7 @@
 summary: 'Fix a bunch of performance problems and pass the performance budget.'
 time: '1 hour'
 deliverables: '1 HTML file, 4 CSS files, images'
+download: 'https://assets.learn-the-web.algonquindesign.ca/web-dev-3/fastness-fixer-download.zip'
 ---
 
 # Fastness fixer
