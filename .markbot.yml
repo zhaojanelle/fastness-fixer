@@ -19,10 +19,6 @@ html:
     valid: true
     bestPractices: true
     outline: true
-    performance:
-      speed: 'WIFI'
-      budget:
-        maxFonts: 3
     has:
       - ['link[href*="Cormorant+Garamond"]', 'The Google Font, `Cormorant Garamon` is missing']
       - ['link[href*="Delius+Unicase"]', 'The Google Font, `Delius Unicase` is missing']
@@ -93,3 +89,8 @@ files:
     maxWidth: 1400
     minWidth: 1400
     maxHeight: 1000
+
+performance:
+  - path: 'index.html'
+    budget:
+        maxFonts: 3
