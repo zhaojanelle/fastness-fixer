@@ -1,14 +1,12 @@
 repo: 'fastness-fixer'
 canvasCourse: 'web-dev-3'
 
-naming: true
-restrictFileTypes: true
-liveWebsite: true
-
-git:
-  numCommits: 2
-  allCommitted: true
-  allSynced: true
+inherit:
+  - naming-restrict-live
+  - git-2
+  - html
+  - google-fonts
+  - css
 
 allFiles:
   files:
@@ -16,9 +14,6 @@ allFiles:
 
 html:
   - path: 'index.html'
-    valid: true
-    bestPractices: true
-    outline: true
     has:
       - ['link[href*="Cormorant+Garamond"]', 'The Google Font, `Cormorant Garamon` is missing']
       - ['link[href*="Delius+Unicase"]', 'The Google Font, `Delius Unicase` is missing']
@@ -29,8 +24,6 @@ html:
 
 css:
   - path: 'css/main.css'
-    valid: true
-    bestPractices: true
     hasNot:
       - ['.ad-wrap']
       - ['.ad-wrap::before']
@@ -38,15 +31,11 @@ css:
       - ['.banner-content', ['font-family']]
 
   - path: 'css/grid.css'
-    valid: true
-    bestPractices: true
     searchNot:
       - ['.unit-m-1-4', 'Having `4` column widths in `medium` and smaller sizes isn’t useful because the website doesn’t use them']
       - ['.unit-l-hidden', 'The `large` size isn’t necessary because the website doesn’t use it']
 
   - path: 'css/modules.css'
-    valid: true
-    bestPractices: true
     hasNot:
       - ['.icon', false, 'The “Icons” module isn’t necessary because the website doesn’t use it']
       - ['.media', false, 'The “Media objects” module isn’t necessary because the website doesn’t use it']
@@ -63,9 +52,11 @@ screenshots:
 
 files:
   - path: 'css/modules.css'
+    smushed: false
     maxSize: 6
 
   - path: 'css/grid.css'
+    smushed: false
     maxSize: 5
 
   - path: 'images/banner.jpg'
@@ -93,4 +84,4 @@ files:
 performance:
   - path: 'index.html'
     budget:
-        maxFonts: 3
+      maxFonts: 3
