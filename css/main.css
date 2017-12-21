@@ -29,41 +29,6 @@ h2 {
 
 .banner-content {
   color: #fff;
-  font-family: Lobster, sans-serif;
-  text-shadow: .1em .1em .3em rgba(0, 0, 0, .6);
-}
-
-.ad-wrap {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 0;
-  position: relative;
-  width: 320px;
-
-  border-bottom: 1px solid #ccc;
-  border-top: 1px solid #ccc;
-}
-
-.ad-wrap::before {
-  content: "Advertisement";
-  left: 50%;
-  padding: 0 .5em;
-  position: absolute;
-  top: -.7em;
-
-  background-color: #fff;
-  transform: translateX(-50%);
-
-  color: #ccc;
-  font-size: .5rem;
-  text-transform: uppercase;
   font-family: sans-serif;
-}
-
-.ad {
-  display: block;
-  height: 240px;
-  width: 320px;
-
-  border: 0;
+  text-shadow: .1em .1em .3em rgba(0, 0, 0, .6);
 }
